@@ -10,24 +10,14 @@ var browserSync = require('browser-sync');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'bundle';
 
-/*
- * Build the Jekyll Site
- * runs a child process in node that runs the jekyll commands
- */
 gulp.task('jekyll-build', function (done) {
 	return cp.spawn(jekyllCommand, ['exec', 'jekyll', 'build'], {stdio: 'inherit'}).on('close', done);
 });
 
-/*
- * Rebuild Jekyll & reload browserSync
- */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 	browserSync.reload();
 });
 
-/*
- * Build the jekyll site and launch browser-sync
- */
 gulp.task('browser-sync', ['jekyll-build'], function() {
 	browserSync({
 		server: {
@@ -36,9 +26,6 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 	});
 });
 
-/*
-* Compile and minify sass
-*/
 gulp.task('sass', function() {
   	gulp.src('src/styles/**/*.scss')
 		.pipe(plumber())
@@ -47,18 +34,12 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('assets/css/'));
 });
 
-/*
-* Compile fonts
-*/
 gulp.task('fonts', function() {
 	gulp.src('src/fonts/**/*.{ttf,woff,woff2}')
 		.pipe(plumber())
 		.pipe(gulp.dest('assets/fonts/'));
 })
 
-/*
- * Minify images
- */
 gulp.task('imagemin', function() {
 	return gulp.src('src/img/**/*.{jpg,png,gif}')
 		.pipe(plumber())
@@ -66,9 +47,6 @@ gulp.task('imagemin', function() {
 		.pipe(gulp.dest('assets/img/'));
 });
 
-/**
- * Compile and minify js
- */
 gulp.task('js', function(){
 	return gulp.src('src/js/**/*.js')
 		.pipe(plumber())
