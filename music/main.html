@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>노래 검색하기</title>
+   <link rel="stylesheet" href="css/검색엔진.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+</head>
+<body>
+   <script type="text/javascript">
+      function checkId(form) {
+         window.open("login.html" + "", "", "_blank");
+      }
+   </script>
+   <div id="andajd">
+   	<ul>
+   		<li>
+   			<form class="search" action="로그인 틀.html">
+              <li class="sel">
+                  <select class="SelectSearch" name="WhichSearch">
+                     <option id="youtube_music" value="youtube_music">Youtube music</option>
+                     <option id="Melon" value="Melon">Melon</option>
+                     <option id="genie" value="genie">genie</option>
+                  </select>
+               </li>
+               <li class="key">
+                  <input class="keyword" type="text" name="search" maxlength=255 value="" autocomplete="off" placeholder="검색어 입력">
+               </li>
+               <li class="but">
+                  <button class = "img-button" type = "submit" name = "click" value = "">
+               	  <i class="fas fa-search">찾기<i>
+            		</button>
+               </li>
+      		</form>   
+   		</li>
+   	</ul>
+      <ul class="lin">
+         <li class="lo">
+            <form id="login" name="form" method=post>
+                  <button name="loging" type="button" value="로그인" onClick="javascript:checkId(this.form);">
+                     <p>로그인</p>
+                  </button>
+            </form>
+         </li>   
+      </ul>
+   </div>
+   
+   <script type="text/javascript">
+      const form = document.querySelector('.search');
+      const input = document.querySelector('.keyword');
+      const engine = document.querySelector('.SelectSearch');
+      
+      form.addEventListener('submit', event => { 
+         event.preventDefault();
+         const keyword = input.value 
+         if (engine.value === 'youtube_music'){
+            if (keyword === '실시간 차트'){
+               window.open('https://music.youtube.com/charts');
+            }
+         }
+         if (engine.value === 'Melon'){
+            if (keyword === '실시간 차트'){
+               window.open('https://www.melon.com/chart/index.htm');
+            }
+         }
+         if (engine.value === 'genie'){
+            if (keyword === '실시간 차트'){
+               window.open('https://www.genie.co.kr/chart/top200');
+            }
+         }
+         if (engine.value === 'youtube_music'){
+            if (keyword !== '실시간 차트'){
+               if (keyword !== ''){
+                  window.open('https://music.youtube.com/search?q=' + keyword, "", "_blank");
+               }
+            }
+         } 
+         if (engine.value === 'Melon'){
+            if (keyword !== '실시간 차트'){
+               if (keyword !== ''){
+                  window.open('https://www.melon.com/search/total/index.htm?q=' + keyword, "", "_blank");
+               }
+            }
+         }
+         if (engine.value === 'genie'){
+            if (keyword !== '실시간 차트'){
+               if (keyword !== ''){
+                  window.open('https://www.genie.co.kr/search/searchMain?query=' + keyword, "", "_blank");
+               }
+            }
+         }
+         if (keyword === ''){
+             alert("검색어를 입력해 주세요.");
+         }
+      })
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</body>
+</html>
