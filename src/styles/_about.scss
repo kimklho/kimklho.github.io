@@ -27,7 +27,7 @@
   p {
     font-size: 16px;
   }
-  @media only screen and (min-width: $cut + 100) {
+  @media only screen and (min-width: $cut + 500) {
     flex-wrap: nowrap;
     font-size: 75px;
   }
