@@ -1,9 +1,9 @@
 #about {
   font-size: 120%;
   
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 960x;
+  max-width: 1500x;
   @media only screen and (min-width: $cut) {
     width: 80%;
   }
@@ -28,7 +28,7 @@
     font-size: 16px;
   }
   @media only screen and (min-width: $cut) {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: 75px;
   }
 }
