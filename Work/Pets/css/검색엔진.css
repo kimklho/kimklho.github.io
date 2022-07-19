@@ -1,0 +1,60 @@
+.ah{
+   font-weight: bold;
+   text-decoration: none;
+   color: white;
+}
+.i_back_hoom{
+   background-color: pink;
+   width: 755px;
+   height: 50px;
+   margin: 0 auto;
+}
+.ww{
+   line-height: 50px;
+   text-align: center;
+}
+*{
+   margin: 0;
+   height: 0;
+}
+#andajd{
+   width: 795px;
+   height: 500px;
+   margin: 0 auto;
+   background-image: url(../img/dog1.jpg);
+   background-repeat: no-repeat;
+}
+button img{
+	width: 10px;
+   height: 10px;
+   margin: 0px;
+}
+form{
+   width: 500px;
+   height: 40px;
+   margin: 0 200px;
+}
+.SelectSearch{
+   margin-top: 20px;
+   height: 25px;
+}
+.keyword{
+   margin-top: 20px;
+   height: 20px;
+}
+button{
+   margin-top: 20px;
+   height: 25px;
+}
+li{
+   list-style: none;
+}
+aside{
+   width: 795px;
+   height: 100px;
+   margin: 0 auto;
+   background: #48ABF1;
+   text-align: center;
+   font-size: 20px;
+   line-height: 100px;
+}

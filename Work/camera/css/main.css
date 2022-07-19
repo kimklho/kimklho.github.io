@@ -1,0 +1,38 @@
+div{
+	width: 100%;
+	height: 1000px;
+	background: #ddd;
+
+}
+.zkapfk{
+	margin-top: 0;
+	font-size: 60px;
+}
+p{
+	text-align: center;
+	font-size: 40px;
+}
+ul{
+	height: 100p;
+}
+li{
+	list-style-type: none;
+}
+img{
+	width: 300px;
+	height: 100px;
+}
+.Nikon{
+	height: 100px;
+}
+a{
+	text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+form{
+	text-align: center;
+}
+.footer{
+	font-size: 20px;
+}

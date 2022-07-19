@@ -1,0 +1,98 @@
+      #wrapper{
+         width: 800px;
+         height: 1200px; 
+         margin: 0 auto;
+         overflow: hidden;
+      }
+      body{
+         font: 18px "맑은 고딕";
+      }     
+
+      header{
+         width: 800px;
+         height: 200px;
+         background: #f46075;
+         background-image: url(../img/nav2.png);
+         background-position: right center;
+         background-repeat: no-repeat;
+      }
+
+      nav{
+         width: 800px;
+         height: 90px;
+         padding-top: 120px;
+      }
+
+      section{
+         width: 550px;
+         display: inline-block;
+
+      }
+
+      article{
+         width: 235px;
+         height: 380px;
+         margin-right: 10px;
+         margin-top: 10px; 
+         float: left;
+         padding: 15px;
+      }
+
+      h3 a{
+         text-decoration: none;
+         font-weight: bold;
+         color: black;
+      }
+
+      li a{
+         text-align: center;
+         text-decoration: none;
+         font-weight: bold;
+         color: white;
+      }
+
+      li{
+         display: inline;
+         list-style-type: none;
+         padding: 13px;
+      }
+      
+      .a{
+         background-color: #B0FE6C;
+      }
+      .b{
+         background-color: #F365BC;
+      }
+      .c{
+         background-color: #6161FB;
+      }
+      .d{
+         background-color: #4CFBEC;
+      }
+      p{
+         text-align: justify;
+      }
+
+      aside{
+         width: 250px;
+         height: 830px;
+         margin-top: 90px; 
+         display: inline-block;
+         float: right;
+         background: #1FFA7D;
+         
+      }
+      aside img{
+         width: 240px;
+      }
+      footer{
+         clear: both;
+         width: 800px;
+         height: 50px;
+         color: white;
+         background-color: black;
+         line-height: 50px;
+      }
+      footer p{
+         text-align: center;
+      }

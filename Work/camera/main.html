@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>카메라 정보</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="main">
+		<p class="jo">카메라 정보</p><br>
+		<p class="zkapfk"><a href="ng/Canon.html">Canon<a> <a href="ng/Nikon.html">Nikon<a> <a href="ng/SONY.html">SONY<a></p>
+		<p style="text-align: center;">
+			<img class="Canon" src="img/Canon.jpg">
+			<img class="Nikon"src="img/Nikon.jpg">
+			<img class="SONY"src="img/SONY.jpg">
+		</p>
+		<ul>
+			<li>
+				<form class="search">
+					<select class='SelectSearch' name="WhichSearch">
+						<option id='google' value='google'>Google</option>
+						<option id='naver' value='naver'>Naver</option>
+					</select>
+					<input class='keyword' type='text' name='search' maxlength=255 value="" autocomplete="off">
+					<button   class = "img-button" type = "submit" name = "click" value = "">
+						<i class="fas fa-search">찾기<i>
+					</button>
+				</form>
+			</li>
+		</ul>
+		<p class="footer">더 궁금하신것은 검색하여 찾아보세요!</p>
+	</div>
+	
+	<script type="text/javascript">
+      const form = document.querySelector('.search')
+      const input = document.querySelector('.keyword')
+      const engine = document.querySelector('.SelectSearch')
+      
+      
+      form.addEventListener('submit', event => {
+         event.preventDefault();
+         const keyword = input.value
+         if (engine.value === 'google') {
+            window.open('https://www.google.co.kr/search?q=' + keyword, "", "_blank")
+         } else {
+            window.open('https://search.naver.com/search.naver?query=' + keyword, "", "_blank")
+         }
+      })
+   </script>
+</body>
+</html>
