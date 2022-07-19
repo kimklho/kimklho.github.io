@@ -14,6 +14,9 @@
 		if (random == 1000){
 			random - 1;
 		}
+		function checkId(form) {
+        	window.open("GAME_tutorial.html" + "", "", "_blank");
+      	}
 	</script>
 	<section class="main">
 		<div id="result">0</div> 
@@ -28,8 +31,8 @@
 			<button type="submit" class="inputbutton">input</button>
 			<input type="button" class="res" value="reset" onClick="window.location.reload()">
 		</form>
-		<form action="GAME_tutorial.html" >
-			<button type="submit" class="gameM">GAME_tutorial</button>
+		<form>
+			<button type="submit" class="gameM" onClick="javascript:checkId(this.form);">GAME_tutorial</button>
 		</form>
 		<div id="an"></div>
 	</section>
