@@ -13,10 +13,13 @@
 	<div id='answer'></div>
 	<script>
         var a = sessionStorage.getItem("favoriteMovie");
-        if(a == 0 || a == 1){
+        if(a == 0){
         	document.getElementById('answer').innerHTML = "첫번째에 성공하셨습니다! 축하드립니다.";
-        }else{
-        	 document.getElementById('answer').innerHTML = a + "번째에 성공하셨습니다! 축하드립니다.";
+        }else if(a == 1){
+		document.getElementById('answer').innerHTML = "두번째에 성공하셨습니다! 축하드립니다.";
+	}else{
+		a + 1;
+        	document.getElementById('answer').innerHTML = a + "번째에 성공하셨습니다! 축하드립니다.";
         }
         
     </script>
