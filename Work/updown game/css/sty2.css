@@ -1,0 +1,69 @@
+body{
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	background: #ccc;
+}
+
+.randing{
+	width: 70vw;
+	height: 100vh;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.main{
+	position: relative;
+    top: 30vh;
+}
+
+footer{
+	width: 70vw;
+	position : absolute;
+	bottom : 5vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rr{
+	width: 31vw;
+	height: 50px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size : 5vh;
+}
+
+.inputbutton{
+	width: 15.5vw;
+	height: 5vh;
+	font-size : 2vh;
+}
+
+.res{
+	width: 15.5vw;
+	height: 5vh;
+	font-size : 2vh;
+}
+.gameM{
+	width: 31.5vw;
+	height: 30px;
+	margin-top: 5px;
+}
+
+#text{
+	font-size: 3vw;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#result{
+	font-size: 2vw;
+	margin-bottom: 2px;
+}
+.inputcut{
+	font-size: 2vw;
+}
