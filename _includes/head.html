@@ -1,0 +1,106 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Development log</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/assets/my_logo.png' }}" >
+
+  <style type="text/css">
+    /*공통 CSS*/
+    a{
+      text-decoration: none;
+    }
+    .img222{
+      width: 280px;
+      height: 280px;
+    }
+    /* 컴퓨터 & 패드들 */
+    @media all and (min-width:1066px){
+      .badges{
+        position: fixed;
+        /*bottom: 35px; */
+        right: 15px;
+      }
+      .badges .badge{
+        border-radius: 10px;
+        overflow: hidden;
+        /*background-color: #7b68ee;*/ /*7b68ee mediumslateblue 미디움슬레이트블루*/
+      }
+      .bb{
+        cursor: default;
+        font-size: 23px; 
+        margin-top: 10px; 
+        text-align: right;
+        font-family: 'Noto Sans', sans-serif; /* font */
+      }
+      .winter{
+        color: black;
+        border-radius: 30px;
+        background-color: RGBA(255, 255, 255, 0.9);
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        width: 217px;
+        height: 300px;
+        padding: 10px;
+      }
+      .buttomm{
+        border: 0;
+        border-radius: 20px;
+        width: 200px;
+        margin-left: 10px;
+        transition: 1s;
+        position: absolute;
+        top: 295px;
+      }
+      .buttomm:hover{
+        transition: 0.5s;
+        color: white;
+        background-color: RGBA(051, 051, 051, 0.9);
+      }
+      .buttomm:active {
+        transition: 0s;
+        color: white;
+        background-color: RGBA(051, 051, 051, 0.9);
+        box-shadow: inset -.3rem -.1rem 1.4rem  black, inset .3rem .4rem .8rem black; 
+        cursor: pointer;
+      }
+      .js-weather a {
+        transition: 0.5s;
+        color: black;
+      }
+      .js-weather a:hover{
+        transition: 0.5s;
+        color: #F84738;
+      }
+      .js-weather a:active {
+        color: palegreen;
+      }
+      .tech{
+        transition: .3s;
+      }
+      .user:hover > :not(:hover){
+        opacity: .4;
+      }
+    }
+    /* 휴대폰 CSS */
+    @media only screen and (min-width : 321px) and (max-width : 1065px){
+      .winter{
+        display: none;
+      }
+      .badges{
+        display: none;
+      }
+    }
+  </style>
+  <div class="badges">
+    <div class="badge">
+      <P class="bb">Time left until the New Year</P>
+      <p id="remain-time" class="bb"></p>
+    </div>
+  </div>
+</head>

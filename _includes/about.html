@@ -1,0 +1,143 @@
+<!-- GSAP link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- font link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+
+
+<link rel="stylesheet" href="../assets/css/button.css">
+
+<div class="winter" style="opacity: 0;">
+  <div class="wrapper" style="width: 62px; margin-left: 150px; position: absolute;">
+    <input type="checkbox" id="switchAll" onclick="removeBack();" checked>
+    <label for="switchAll" class="switch_labelAll">
+      <span class="onf_btnAll"></span>
+    </label>
+  </div>
+  <div id="removbk">
+    <div id="wimg"></div>
+    <div class="wther"></div>
+    <span class="js-weather"></span>
+    <div id="time"></div>
+    <div id="nowTime"></div>
+    <button class="buttomm" onclick="runwe()">UPDATE</button>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+const remainTime = document.querySelector("#remain-time");
+  const badgeEL = document.querySelector('.badges')
+  
+  // 스크롤시 모양전환
+    window.addEventListener('scroll', function(){
+        let sc = 0;
+        var scrollTop = window.scrollY;
+        var innerHeight = window.innerHeight;
+        var scrollHeight = document.body.scrollHeight - 76;
+        if (scrollTop + innerHeight >= scrollHeight) {
+            sc = 1;
+        }else {
+            sc = 0;
+        }
+        if(window.scrollY>100 && sc == 0){
+            gsap.to(badgeEL, .6,{
+                width: 155,
+                height: 170,
+                bottom: 15,
+                color: 'black'
+            });
+        }else if(sc == 1){
+            gsap.to(badgeEL, .6,{
+                width: 155,
+                height: 170,
+                bottom: 90,
+                color: 'black'
+            });
+        }else{
+            gsap.to(badgeEL, .6,{
+                width: 400,
+                height: 105,
+                bottom: 15,
+                color: 'white'
+            });
+        }
+    })
+  // 시간 JS
+  function diffDay() {
+    const wndaytime = new Date();
+    const wnday = wndaytime.getFullYear() + 1;
+    const todayTim2 = new Date(wnday, 0, 1);
+    const a = todayTim2 - wndaytime;
+    const diffDay = Math.floor(a / (1000*60*60*24));
+    const diffHour = Math.floor((a / (1000*60*60)) % 24);
+    const diffMin = Math.floor((a / (1000*60)) % 60);
+    const diffSec = Math.floor(a / 1000 % 60);
+    if (window.scrollY>150) {
+      remainTime.innerHTML = `${diffDay}일 ${diffHour}시간<br>${diffMin}분 ${diffSec}초`;
+    }else{
+      remainTime.innerText = `${diffDay}일 ${diffHour}시간 ${diffMin}분 ${diffSec}초`;
+    }
+    var hour = modifyNumber( wndaytime.getHours());
+    var min = modifyNumber( wndaytime.getMinutes());
+    var sec = modifyNumber( wndaytime.getSeconds());
+    document.getElementById("nowTime").innerHTML = "current time: " + hour + ":" + min  + ":" + sec;
+    function modifyNumber(time){
+        if(parseInt(time)<10){
+            return "0"+ time;
+        }
+        else{
+            return time;
+        }
+    }
+  
+  }
+  diffDay();
+  setInterval(diffDay, 100);
+</script>
+
+<div class="user-details">
+  <h1>My development journal</h1>
+  <p>저는 한국 출신의 개발자 김기호 입니다. 저는 회사의 재직중에 있습니다. 저는 C, HTML, JS, JSP, PHP, CSS, JAVA, React등을 사용해 개발중이며 첫 HTML 페이지인 "애완견 입양 페이지"부터 그 다음 만든 "음악 검색 페이지"등이 있습니다. 저에 대해 더 알고 싶다면 인스타그램, 페이스북, GITHUB등을 팔로우 하여 저를 응원해 주세요! 감사합니다.</p>
+</div>
+<div class="user">
+    <div class="tech">
+    <a href="Work/music_remake/index.html">
+      <h2 style="color: black; margin: 0 auto;">Song search</h2>
+      <img class="img222" src="Work/New_img/music_img.jpg" >
+      <p style="color: black;">위에서 소개시켜 드린 노래 검색 페이지에 두번째(rework) 버전 입니다.</p>
+    </a>
+  </div>
+  <div class="tech">
+    <a href="Work/camera/main.html">
+      <h2 style="color: black; margin: 0 auto;">Camera info</h2>
+      <img class="img222" src="Work/New_img/camera1.jpg" >
+      <p style="color: black;">위에서 소개시켜 드리진 않았지만 혼자 만든 페이지 입니다.</p>
+    </a>
+  </div>
+  <div class="tech">
+    <a href="Work/TTRS_mian/index.html">
+      <h2 style="color: black; margin: 0 auto;">Tetris game</h2>
+      <img class="img222" src="Work/New_img/TTRS.jpg" >
+      <p style="color: black;">위에서 소개시켜 드리진 않았지만 HTML, JS, CSS로 만든 테트리스 게임 입니다.</p>
+    </a>
+  </div>
+  <div class="tech">
+    <a href="Work/updown game/index.html">
+      <h2 style="color: black; margin: 0 auto;">UP & DOWN GAME</h2>
+      <img class="img222" src="Work/New_img/updown.jpg" >
+      <p style="color: black;">위에서 소개시켜 드리진 않았지만 HTML, JS, CSS로 만든 UP & DOWN 게임 입니다.</p>
+    </a>
+  </div>
+  <div class="tech">
+    <a href="/Work/CSS test web/index(swich).html">
+      <h2 style="color: black; margin: 0 auto;">laboratory</h2>
+      <img class="img222" src="Work/New_img/bccc.png" style="width: 280px; height: 280px;">
+      <p style="color: black;">제가 개발중인것들을 직접 체험해 보세요.(오류가 발생하여 수정해야하는 웹이 아닌 이상 지속적인 업데이트 예정)</p>
+    </a>
+    </div>
+</div>
