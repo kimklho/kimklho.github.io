@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>로그인</title>
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<!-- 상태바에 주소 숨기기 -->
+	<script-x language="JavaScript-x"></script-x>
+</head>
+<body>
+	<script type="text/javascript">
+		window.resizeTo(270, 190);
+	</script>
+	<div>
+		<ul>
+			<li>
+				<form class="log">
+					<select class="SelectSearch" name="WhichSearch">
+	                    <option id="youtube_music" value="youtube_music">Youtube music</option>
+						<option id="Apple" value="Apple">Apple music</option>
+	                    <option id="Melon" value="Melon">Melon</option>
+	                    <option id="genie" value="genie">genie</option>
+                  	</select>
+                  	<button class = "ibutton" type = "submit" name = "click" value = "">
+               	  		<i class="fas-fa-search">로그인<i>
+            		</button>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- Apple Music 지원 X -->
+	<div class="Apple_Music">Apple Music은 지원하지 않습니다!</div>
+	<style>
+		.Apple_Music{
+			color: white;
+			font-size: 15px;
+			opacity: 0;
+			cursor: context-menu;
+		}
+	</style>
+	<script type="text/javascript">
+		const form = document.querySelector('.log')
+    	const engine = document.querySelector('.SelectSearch')
+
+      	form.addEventListener('submit', event => { 
+
+         	event.preventDefault(); 
+         	if (engine.value === 'youtube_music'){
+               	window.open('https://accounts.google.com/signin/v2/identifier?hl=ko&continue=https%3A%2F%2Fwww.google.com%3Fhl%3Dko&ec=GAlA8wE&flowName=GlifWebSignIn&flowEntry=AddSession' + "", "", "_blank");
+               	window.close('login.html');
+         	}
+         	if (engine.value === 'Melon'){
+               	window.open('https://member.melon.com/muid/web/login/login_inform.htm' + "", "", "_blank");
+         		window.close('login.html');
+         	}
+      		if (engine.value === 'genie'){
+               	window.open('https://www.genie.co.kr/member/popLogin?page_rfr=https%3A//www.genie.co.kr/' + "", "", "_blank");
+               	window.close('login.html');
+         	}
+			if (engine.value === 'Apple'){
+				document.querySelector('.Apple_Music').style.opacity= '1';
+			}
+      	})
+    </script>
+</body>
+</html>

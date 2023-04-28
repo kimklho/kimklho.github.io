@@ -1,0 +1,141 @@
+   *{
+      margin: 0;
+      height: 0;
+   }
+   li{
+      list-style: none;
+   }
+   @media only screen and (min-width : 321px) and (max-width : 767px){
+      body{
+         background-color: black;
+      }
+      #andajd{
+         width: 100vw;
+         height: 100vh;
+      }
+      .sel{
+         width: 160px;
+         height: 25px;
+      }
+      .SelectSearch{
+         margin-top: 100px;
+         width: 110px;
+         height: 20px;
+         color: black;
+         background-color: white;
+         border:  0;
+         outline:  0;
+      }
+      .key{
+         width: 75%;
+         height: 45px;
+         padding-top: 100px;
+      }
+      .keyword{
+         height: 40px;
+         width: 200px;
+         color: black;
+         background-color: white;
+         font-size: 30px;
+         border:  0;
+         outline:  0;
+      }
+      .but{
+         width: 40px;
+         height: 20px;
+         margin-left: 180px;
+         padding-top: 10px;
+      }
+      .search button{
+         width: 50px;
+         height: 30px;
+         color: black;
+         background-color: white;
+         border:  0;
+         outline:  0;
+      }
+      .lo{
+         padding-top: 5px;
+         width: 100px;
+         height: 50px;
+      }
+      button[name="loging"]{
+         color: black;
+         background-color: white;
+      }
+   }
+
+   @media all and (min-width:768px) { 
+      #andajd{
+         margin: 0 auto;
+         height: 100vh;
+         width: 190vh;
+         background-image: url(../img/back.gif);
+         background-size: cover;
+         background-repeat: no-repeat;
+      }
+      li{ 
+         width: 700px;
+         height: 40;
+         margin: 0 auto; 
+      }
+      .sel{
+         height: 50px;
+      }
+      .SelectSearch{
+         height: 56px;
+         width: 150px;
+         margin-left: 8.1%;
+         margin-top: 100px;
+         color: white;
+         background-color: black;
+         border:  0;
+         outline:  0;
+      }
+      .key{
+         height: 50px;
+         width: 300px;
+         margin-right: 27.7%;
+      }
+      .keyword{
+         height: 54px;
+         width: 300px;
+         margin-top: 50px;
+         color: white;
+         background-color: black;
+         font-size: 30px;
+         border:  0;
+         outline:  0;
+      }
+      .but{
+         height: 50px;
+         width: 50px;
+         margin-right: 20%;
+      }
+      .search button{
+         height: 56px;
+         width: 50px;
+         color: white;
+         background-color: black;
+         border:  0;
+         outline:  0;
+      }
+      button[name="loging"]{
+         color: white;
+         background-color: black;
+      }
+      .lin{
+         width: 200px;
+         height: 200px;
+      }
+      .lo{
+         width: 200px;
+         height: 200px;
+         margin-top: 20px;
+      }
+   }
+   button[name="loging"]{
+      width: 100px;
+      height: 50px;
+      padding-bottom: 20px;
+   }

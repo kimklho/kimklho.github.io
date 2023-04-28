@@ -1,0 +1,205 @@
+/* 공통 CSS */
+body{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-image: url(../img/back.gif);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+}
+form{
+	width: 100vw;
+}
+/* 컴퓨터 & 패드들 */
+@media all and (min-width:768px){
+	.logname{
+		margin: 25px 0 0 25px;
+		width: 70px;
+		height: 40px;
+		border-radius: 5px 5px 5px 5px;
+		border: none;
+		background-color: black;
+		font-size: 15px;
+		color: white;
+	}
+	.sel{
+		width: 500px;
+		height: 55px;
+		list-style: none;
+		margin: auto;
+		margin-top: 100px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.SelectSearch{
+		width: 120px;
+		height: 55px;
+		outline: none;
+		border-radius: 5px 0 0 5px;
+		color: white;
+		background-color: black;
+		border: none;
+	}
+	.keyword{
+		font-family: 'Nanum Pen Script', cursive;
+		width: 330px;
+	    height: 55px;
+	    border: 1px solid #ccc;
+	    background-color: black;
+	    padding: 4px 10px;
+	    color: white;
+	    box-sizing: border-box;
+	    font-size: 30px;
+	    border: none;
+	}
+	.keyword:focus{ outline: none; }
+	.gose{
+		width: 50px;
+		height: 55px;
+		border-radius: 0 5px 5px 0;
+		border: none;
+		background-color: black;
+		color: white;
+	}
+	.time-ma{
+		display: flex;
+		justify-content: center;
+		height: 50px;
+	}
+	.time-main{	
+		background-color: black;
+		width: 400px;
+		opacity: 0.5;
+		position: relative;
+		border-radius: 0 0 5px 5px;
+	}
+	.date{
+	    font-size: 45px; 
+	    color: white;
+	    font-family: 'Nanum Pen Script', cursive; 
+	    position: absolute;
+	    left: 20px;
+	}
+	.time{
+	    font-size: 45px;
+	    font-weight: bold;
+	    color: white;
+	    font-family: 'Nanum Pen Script', cursive; 
+	    position: absolute;
+	    right: 20px;
+	}
+	.SelectSearch, .logname{
+		font-family: 'Nanum Pen Script', cursive; 
+		font-size: 19px;
+	}
+	.logname{
+		font-size: 30px;
+	}
+}
+/* 휴대폰 */
+@media only screen and (min-width : 321px) and (max-width : 767px){
+	body{
+		position: relative
+	}
+	#login{
+		display: none;
+	}
+	.logname{
+		margin: 25px 0 0 25px;
+		width: 70px;
+		height: 40px;
+		border-radius: 5px 5px 5px 5px;
+		border: none;
+		background-color: black;
+		color: white;
+	}
+	.sel{
+		width: 100vw;
+		height: 55px;
+		list-style: none;
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.SelectSearch{
+		width: 120px;
+		height: 55px;
+		outline: none;
+		border-radius: 5px 0 0 5px;
+		color: white;
+		background-color: black;
+		border: none;
+	}
+	.keyword{
+		font-family: 'Nanum Pen Script', cursive;
+		width: 200px;
+	    	height: 55px;
+	    	border: 1px solid #ccc;
+	    	background-color: black;
+	    	padding: 4px 10px;
+	    	color: white;
+	    	box-sizing: border-box;
+	    	font-size: 30px;
+	    	border: none;
+		border-radius: 0 0 0 0;
+	}
+	.keyword:focus{ outline: none; }
+	.gose{
+		width: 50px;
+		height: 55px;
+		border-radius: 0 5px 5px 0;
+		border: none;
+		background-color: black;
+		color: white;
+	}
+	.date{
+		-webkit-transform: rotate(90deg);
+		-webkit-transform-origin: left top;
+		-moz-transform:rotate(90deg);
+		-moz-transform-origin: left top;
+		-ms-transform: rotate(90deg);
+		-ms-transform-origin: left top;
+		-o-transform: rotate(90deg);
+		-o-transform-origin: left top;
+		transform: rotate(90deg);
+		transform-origin: left top;
+		position: absolute;
+		white-space: nowrap;
+		font-size: 45px;
+		text-align: center;
+		line-height: 25px;
+		color: white;
+		font-family: 'Nanum Pen Script', cursive; 
+		left: 10%;
+		top: 200px;
+	}
+	.time{
+		-webkit-transform: rotate(90deg);
+		-webkit-transform-origin: left top;
+		-moz-transform:rotate(90deg);
+		-moz-transform-origin: left top;
+		-ms-transform: rotate(90deg);
+		-ms-transform-origin: left top;
+		-o-transform: rotate(90deg);
+		-o-transform-origin: left top;
+		transform: rotate(90deg);
+		transform-origin: left top;
+		position: absolute;
+		white-space: nowrap;
+		font-size: 45px;
+		text-align: center;
+		line-height: 25px;
+		color: white;
+		font-family: 'Nanum Pen Script', cursive; 
+		left: 10%;
+		top: 420px;
+	}
+	.SelectSearch, .logname{
+		font-family: 'Nanum Pen Script', cursive; 
+		font-size: 19px;
+	}
+	.logname{
+		font-size: 30px;
+	}
+}

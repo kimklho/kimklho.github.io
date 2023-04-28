@@ -1,0 +1,16 @@
+# Site settings
+title: kimkiho
+description: Jekyll Theme kimkiho
+# url: "https://kimkiho.github.io"
+# baseurl: ""
+
+# User settings
+username: kimkiho
+user_description: 저는 한국 출신의 개발자 김기호 입니다. 저는 컴퓨터 고등학교를 재학중이며 내년엔 회사에 취업합니다. 저는 C, HTML, JS, JSP, PHP, CSS, JAVA등을 사용해 개발중이며 현재 만든 작품으로는 "애완견 입양 사이트", "음악 검색 사이트"등이 있습니다 저를 더 알고 싶다면 인스타그램, 페이스북, GITHUB등을 팔로우 하여 저를 응원해 주세요! 감사합니다.
+user_title: Software Engineer
+email: afadg1234@icloud.com
+instagram_username: kimkiho3514
+facebook_username: 김기호
+github_username:  kimklho
+
+exclude: ['package.json', 'src' , 'node_modules']

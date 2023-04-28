@@ -1,0 +1,300 @@
+body{
+  margin: 0;
+}
+.wrapper {
+  width: 105px;
+  height: 35px;
+  text-align: center;
+}
+.backGrondBtn{ 
+  width: 110px;
+  height: 145px;
+  background-color: rgba(128, 128, 128, 0.5);
+  position: fixed;
+  left: 15px;
+  bottom: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.esy{
+  margin: 2px 0 0 2px;
+}
+/* 모든 배경 스위치 ON/OFF */
+#switchAll {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* 불륨 */
+.vlu{
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 0px 0px 5px 5px;
+  height: 0px;
+  width: 110px;
+  position: absolute;
+  left: 55px;
+  bottom: 55px;
+  /* left: 72.2px;
+  bottom: 37.6px; */
+
+  /* 세로 정렬 */
+  -ms-transform: rotate(2700deg); /* IE 9 */
+  -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+  transform: rotate(270deg);
+}
+#ex-in{
+  display: none;
+  margin: 10px 0 0 10px;
+  width: 90px;
+  background: white;
+  border-radius: 20%;
+  -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+  width: 125px; /* 슬라이더 길이 */
+  height: 15px; /* 슬라이더 두께 */
+  border-radius: 6px; /* 슬라이더 모서리를 약간 둥글게 */
+  background: white; /* 슬라이더 색상 */
+  outline: none; /* 슬라이더 테두리 없이 */
+}
+#ex-in::-webkit-slider-thumb {
+  -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+  appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+  width: 25px; /* 슬라이더 핸들 길이 */
+  height: 25px; /* 슬라이더 핸들 높이 */
+  border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+  background: #00f; /* 슬라이더 핸들 색상 */
+  background: #e3adfa; /* 슬라이더 핸들 색상 */
+}
+
+.switch_labelAll {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #e3adfa;
+  border-radius: 20px;
+  transition: 0.6s;
+}
+.switch_labelAll:hover {
+  background: #efefef;
+}
+.onf_btnAll {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #e3adfa;
+  transition: 0.6s;
+}
+
+/* checking style */
+#switchAll:checked+.switch_labelAll {
+  background: #e3adfa;
+  border: 2px solid #e3adfa;
+}
+
+#switchAll:checked+.switch_labelAll:hover {
+  background: #e3adfa;
+}
+
+/* move */
+#switchAll:checked+.switch_labelAll .onf_btnAll {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+#switchAll:checked+#removbk {
+  transition: 0.6s;
+}
+
+/* 버튼 1번 */
+#switch {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #e3adfa;
+  border-radius: 20px;
+  transition: 0.6s;
+}
+.switch_label:hover {
+  background: #efefef;
+}
+.onf_btn {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #e3adfa;
+  transition: 0.6s;
+}
+
+/* checking style */
+#switch:checked+.switch_label {
+  background: #e3adfa;
+  border: 2px solid #e3adfa;
+}
+
+#switch:checked+.switch_label:hover {
+  background: #e3adfa;
+}
+
+/* move */
+#switch:checked+.switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+/* 레인보우 */
+#switch2 {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label2 {
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #e3adfa;
+  border-radius: 20px;
+  transition: 0.6s;
+}
+.switch_label2:hover {
+  background: #efefef;
+}
+.onf_btn2 {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #e3adfa;
+  transition: 0.6s;
+}
+
+/* checking style */
+#switch2:checked+.switch_label2 {
+  background: #e3adfa;
+  border: 2px solid #e3adfa;
+}
+
+#switch2:checked+.switch_label2:hover {
+  background: #e3adfa;
+}
+
+/* move */
+#switch2:checked+.switch_label2 .onf_btn2 {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+/* 버튼 4번 */
+#switch3 {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label3 {
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #e3adfa;
+  border-radius: 20px;
+  transition: 0.6s;
+}
+.switch_label3:hover {
+  background: #efefef;
+}
+.onf_btn3 {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #e3adfa;
+  transition: 0.6s;
+}
+
+/* checking style */
+#switch3:checked+.switch_label3 {
+  background: #e3adfa;
+  border: 2px solid #e3adfa;
+}
+
+#switch3:checked+.switch_label3:hover {
+  background: #e3adfa;
+}
+
+/* move */
+#switch3:checked+.switch_label3 .onf_btn3 {
+  left: 34px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+
+
+/* E.Q Bar */
+#EQBAR{
+  position: fixed;
+  width: 75%;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  /* z-index: ; */
+  /* background-color: #00f; */
+  margin: 0;
+  overflow: hidden;
+}
+.visualizer-container {
+  position: fixed;
+  bottom: -0px;
+  right: 0;
+  left: 170px;
+
+  text-align: center;
+}
+
+.visualizer-container__bar {
+
+  position: relative;
+  bottom: 0px;
+  display: inline-block;
+  background: black;
+  margin: 0 2px;
+  width: 25px;
+  /* max-height: 100px;  */
+}

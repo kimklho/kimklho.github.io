@@ -1,0 +1,25 @@
+body{
+	background: black;
+}
+li{
+	list-style: none;
+}
+.log{
+	display: flex;
+}
+.SelectSearch{
+	border-radius: 5px 0 0 5px;
+}
+button{
+	height: 20px;
+	padding-bottom: 10px;
+	border-radius: 0 5px 5px 0;
+	outline: none;
+}
+.fas-fa-search{
+	margin-bottom: 5px;
+	font-size: 10px;
+}
+button, .SelectSearch{
+	border:none;
+}

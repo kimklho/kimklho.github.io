@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>애완견 종류 검색하기</title>
+   <link rel="stylesheet" href="../css/검색엔진.css">
+</head>
+</head>
+<body>
+   <a href="../main.html" class="ah">
+      <ul class="i_back_hoom">
+         <li>
+            <p class="ww">
+               홈으로
+            </p>
+         </li>
+      </ul>
+   </a>
+   <div id="andajd">
+   		<ul>
+   			<li>
+   				<form class="search">
+                  <select class='SelectSearch' name="WhichSearch">
+                     <option id='google' value='google'>Google</option>
+                     <option id='naver' value='naver'>Naver</option>
+                  </select>
+                  <input class='keyword' type='text' name='search' maxlength=255 value="" autocomplete="off">
+                  <button   class = "img-button" type = "submit" name = "click" value = "">
+            			<i class="fas fa-search">찾기<i>
+            			<img src="../img/Search.jpg">
+         			</button>
+      			</form>
+   			</li>
+   		</ul>
+   </div>
+   <aside>
+      <p>관심있는 강아지를 검색하여 찾아보세요!</p>
+   </aside>
+   <script type="text/javascript">
+      const form = document.querySelector('.search')
+      const input = document.querySelector('.keyword')
+      const engine = document.querySelector('.SelectSearch')
+      
+      
+      form.addEventListener('submit', event => { 
+         event.preventDefault();
+         const keyword = input.value
+         if (engine.value === 'google') {
+            window.open('https://www.google.co.kr/search?q=' + keyword, "", "_blank")
+         } else {
+            window.open('https://search.naver.com/search.naver?query=' + keyword, "", "_blank")
+         }
+      })
+   </script>
+</body>
+</html

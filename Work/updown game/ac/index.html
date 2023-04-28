@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UP & DOWN GAME</title>
+	<link rel="stylesheet" type="text/css" href="css/sty.css">
+	<link rel="stylesheet" type="text/css" href="css/sty2.css">
+</head>
+<body>
+	<div class="randing">
+	<script type="text/javascript">
+		let random = Math.floor(Math.random() * 999 + 1);
+		if (random == 1000){
+			random - 1;
+		}
+		function checkId(form) {
+        		window.open("GAME_tutorial.html" + "", "", "_blank");
+      		}
+	</script>
+	<section class="main">
+		<div id="result">0</div> 
+		<div style="font-size: 1.5vw;">번째 입력입니다!</div>
+		<div id='text'></div>
+		<script type="text/javascript">
+			document.getElementById( 'text' ).innerHTML = '어서오세요!';
+		</script>
+		<form class="rkqt">
+			<input type="number" class="rr" maxlength="3" placeholder="값 입력" onfocus="this.value=''" oninput='handleOnInput(this, 3)'>
+			<br>
+			<button type="submit" class="inputbutton">input</button>
+			<input type="button" class="res" value="reset" onClick="window.location.reload()">
+		</form>
+		<form>
+			<button type="submit" class="gameM" onClick="javascript:checkId(this.form);">GAME_tutorial</button>
+		</form>
+		<div id="an"></div>
+	</section>
+	<script type="text/javascript">
+		const form = document.querySelector('.rkqt');
+		const input = document.querySelector('.rr');
+		const resultElement = document.getElementById('result');
+  		var number = resultElement.innerText;
+		let costs = 0;
+
+		form.addEventListener('submit', event => { 
+        	event.preventDefault();
+        	const keyword = input.value; 
+
+        	if (keyword === ''){
+            	alert("값이 입력되지 않았습니다.");
+            	document.getElementById( 'text' ).innerHTML = '값을 입력해 주세요!';
+        	}else if(keyword === costs){
+        		document.getElementById( 'text' ).innerHTML = '이미 입력된 값입니다!';
+        		alert("이미 입력된 값입니다 다른 값을 입력해 주세요!");
+        			
+        	}else{
+        		if (random < keyword){
+        			document.getElementById( 'text' ).innerHTML = 'DOWN';
+        			number = parseInt(number) + 1;	
+        			resultElement.innerText = number;
+        			costs = keyword;
+        		}
+        		if (random > keyword){
+        			document.getElementById( 'text' ).innerHTML = 'UP';	
+        			number = parseInt(number) + 1;
+        			resultElement.innerText = number;
+        			costs = keyword;
+        		}
+        		if (random == keyword){
+                    sessionStorage.setItem("favoriteMovie", number);
+        			openWin = window.open("ac/answer.html", "", "_blank");
+        		}
+        	}
+        	
+        })
+        function handleOnInput(el, maxlength) {
+  			if(el.value.length > maxlength)  {
+    			el.value 
+      			  = el.value.substr(0, maxlength);
+  			}
+		}
+	</script>
+	<footer>
+		<P>Developer Kim Ki-ho</P>
+	</footer>
+</div>
+</body>
+</html>

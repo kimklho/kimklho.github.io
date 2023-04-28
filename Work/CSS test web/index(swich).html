@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>페이지의 기본 CSS</title>
+	<!-- 라이브러리 -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!-- 수정 CSS -->
+	<link rel="stylesheet" type="text/css" href="./CSS/butn.css">
+</head>
+<body>
+	<!-- <audio src="./music/audio.mp3" id="AudioPlay_tyA"></audio>
+	<audio src="./music/sugar_curush.mp3" id="AudioPlay_tyB"></audio> -->
+	<audio src="./music/mix_7m58s.mp3" id="AudioPlay_tyA"></audio>
+	<div class="backGrondBtn">
+		<div class="esy">
+			<!-- 배경 스위치 on/off -->
+			<div class="wrapper wra1">
+		  		<span class="material-symbols-outlined tun" style="font-size: 35px;">tune</span>
+		  		<input type="checkbox" id="switchAll" onclick="removeBack();" checked>
+		  		<label for="switchAll" class="switch_labelAll">
+		    		<span class="onf_btnAll"></span>
+		 		</label>
+			</div>
+			<div id="removbk">
+				<!-- 다크 모드 -->
+				<div class="wrapper wra2">
+					<span class="material-symbols-outlined darkMode" style="font-size: 35px;">dark_mode</span>
+					<span class="material-symbols-outlined lightMode" style="font-size: 35px; display: none;">light_mode</span>
+			  		<input type="checkbox" id="switch" onclick="NightDay();">
+			  		<label for="switch" class="switch_label">
+			    		<span class="onf_btn"></span>
+			 		</label>
+				</div>
+				<!-- 레인보우 -->
+				<div class="wrapper wra3">
+					<span class="material-symbols-outlined rianbowIkon" style="font-size: 35px;">looks</span>
+			  		<input type="checkbox" id="switch2" onclick="RainBak();">
+			  		<label for="switch2" class="switch_label2">
+			    		<span class="onf_btn2"></span>
+			 		</label>
+			 	</div>
+				<!-- 음악 Play, stop -->
+				 <div class="wrapper wra4">
+					<span class="material-symbols-outlined musicIkon" style="font-size: 35px;">music_note</span>
+			  		<input type="checkbox" id="switch3" onclick="musicPlSt();">
+			  		<label for="switch3" class="switch_label3">
+			    		<span class="onf_btn3"></span>
+			 		</label>
+			 	</div>
+				<div class="vlu">
+					<input id="ex-in" type="range" min="0" max="100">
+				</div>
+		 	</div>
+		</div>
+	</div>
+</body>
+<div id="EQBAR">
+	<div class="visualizer-container"></div>
+</div>
+<footer>
+	<!-- 수정 JS -->
+	<script type="text/javascript" src="./JS/bak.js"></script>		
+</footer>
+</html>

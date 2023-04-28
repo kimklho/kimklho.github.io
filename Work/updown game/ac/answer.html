@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>축하드립니다!</title>
+	<script type="text/javascript">
+		window.resizeTo(440, 250);
+	</script>
+</head>
+<body>
+	<h1>축하드립니다 정답입니다!</h1>
+	<div id='answer'></div>
+	<script>
+        var a = sessionStorage.getItem("favoriteMovie");
+        if(a == 0){
+        	document.getElementById('answer').innerHTML = "첫번째에 성공하셨습니다! 축하드립니다.";
+        }else if(a == 1){
+		document.getElementById('answer').innerHTML = "두번째에 성공하셨습니다! 축하드립니다.";
+	}else{
+		a + 1;
+        	document.getElementById('answer').innerHTML = a + "번째에 성공하셨습니다! 축하드립니다.";
+        }
+        
+    </script>
+    <br>
+	<input type='button' value="창닫기" onClick='window.close()'>
+</body>
+</html>
